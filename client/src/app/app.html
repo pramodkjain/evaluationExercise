@@ -1,0 +1,27 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-xs-1 col-sm-1 col-md-2 col-lg-3">
+      <h1 class="text-center">&nbsp;</h1>
+    </div>
+    <div class="col-xs-10 col-sm-10 col-md-8 col-lg-6">
+      <h1 class="text-center">Evaluation Exercises</h1>
+      <div *ngIf="this.getErrorMessage() != ''" class="alert alert-danger">
+        <a href="#" (click)="clearErrMsg()" class="close" data-dismiss="alert">&times;</a>
+        {{this.getErrorMessage()}}
+      </div>
+      <div *ngIf="this.getMessage() != ''" class="alert alert-success">
+        <a href="#" (click)="clearErrMsg()" class="close" data-dismiss="alert">&times;</a>
+        {{this.getMessage()}}
+      </div>
+      <hr>
+        <invoice-form></invoice-form>
+    </div><!--/col-->
+    <div class="col-xs-1 col-sm-1 col-md-2 col-lg-3">
+      <h1 class="text-center">&nbsp;</h1>
+    </div>
+  </div><!--/row-->
+
+
+</div>
+
